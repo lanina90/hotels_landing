@@ -1,0 +1,185 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Туристична компанія</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css">
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+
+  <script src="https://kit.fontawesome.com/40d398d1d1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<header class="header header-image">
+  <div class="container">
+    <div class="header__menu">
+      <div class="header__logo">
+        <p class="subheading">LOGO</p>
+      </div>
+
+      <nav class="header__nav">
+        <a href="#" class="header__nav-item">Всі готелі</a>
+        <a href="#" class="header__nav-item">Міста</a>
+        <a href="#" class="header__nav-item">Про нас</a>
+        <a href="#" class="header__nav-item">Контакти</a>
+      </nav>
+      <div class="burger">
+        <span></span>
+      </div>
+    </div>
+    <div class="header__main">
+      <h1 class="font-white">Найкращі готелі Києва в одному місці</h1>
+      <p class="subheading font-white">Обирайте кращих для комфортного відпочинку </p>
+      <p class="subheading font-white">Швидше знаходьте кращі пропозиції</p>
+    </div>
+    <div class="arrow-down">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</header>
+<main>
+  <h2>Топ Кращих Готелів Києва</h2>
+  <section class="list container">
+    <div class="list__hotel">
+      <img class="list__hotel-img" src="img/opera-hotel.jpeg" alt="">
+      <div class="list__hotel-subheading"><h3>Opera Hotel 5*</h3></div>
+      <div class="list__hotel-desc">
+        <p>“Опера” – це один з топ найкращих готелів Києва не тільки за розташуванням, але й за основними критеріями
+          вибору житла преміум-класу.</p>
+        <ul>
+          <li>Ціни за стандартний номер на 1 добу стартують від 136 євро за особу.</li>
+          <li>Діє система знижок та спецпропозицій.</li>
+        </ul>
+
+        <p>Адреса: вул. Б. Хмельницького, 53.</p>
+        <button class="list__hotel-btn" data-value="opera">Подивитись на мапі</button>
+      </div>
+    </div>
+
+    <div class="list__hotel">
+      <img class="list__hotel-img" src="img/hilton.jpeg" alt="">
+      <div class="list__hotel-subheading"><h3>Hilton 5*</h3></div>
+      <div class="list__hotel-desc">
+        <p>Всього за 5 хвилин ходьби від собору Святого Володимира у високій сучасній будівлі знаходиться один із
+          п’ятизіркових готелів Києва – Хілтон.</p>
+        <ul>
+          <li>Ціни за 1 добу в номері на двох варіюються від 260 євро.</li>
+          <li>Є можливість розміщення з тваринами.</li>
+        </ul>
+
+        <p>Адреса: Бульвар Т. Шевченка, 30.</p>
+        <button class="list__hotel-btn" data-value="hilton">Подивитись на мапі</button>
+      </div>
+    </div>
+    <div class="list__hotel">
+      <img class="list__hotel-img" src="img/intercontinental.jpeg" alt="">
+      <div class="list__hotel-subheading"><h3>InterContinental 5*</h3></div>
+      <div class="list__hotel-desc">
+        <p>Цей готель славиться чудовими видами з вікон на Михайлівську площу та номерами, де поєдналася класика з
+          сучасністю. Апартаменти доступні від стандартного до губернаторського.
+        </p>
+        <ul>
+          <li>Вартість добового проживання від 270 євро. Сніданок включений.</li>
+        </ul>
+
+        <p>Адреса: вул. Велика Житомирська, 2а.</p>
+        <button class="list__hotel-btn" data-value="intercontinental">Подивитись на мапі</button>
+      </div>
+    </div>
+    <div class="list__hotel">
+      <img class="list__hotel-img" src="img/riviera.jpeg" alt="">
+      <div class="list__hotel-subheading"><h3>Riviera House 5*</h3></div>
+      <div class="list__hotel-desc">
+        <p>Riviera House по праву належить до готелів 5 зірок. Окрім мальовничого виду на Дніпро та історичний Поділ,
+          гостей столиці тут приваблює широкий вибір номерів.
+        </p>
+        <ul>
+
+          <li>Вартість добового проживання від 150 євро за двох без сніданку.</li>
+        </ul>
+        <p>Адреса: вул. Петра Сагайдачного, 15.</p>
+        <button class="list__hotel-btn" data-value="riviera">Подивитись на мапі</button>
+      </div>
+    </div>
+    <div class="list__hotel">
+      <img class="list__hotel-img" src="img/city-holiday.jpeg" alt="">
+      <div class="list__hotel-subheading"><h3>City Holiday Resort & SPA 5*</h3></div>
+      <div class="list__hotel-desc">
+        <p>City Holiday розташований у сосновому парку і зовсім недалеко від міжнародного аеропорту “Жуляни” (10 км)</p>
+        <ul>
+          <li>Вартість добового проживання від 100 євро за особу. Сніданок включений.</li>
+          <li>У вартість готелю у Києві також входить користування дитячою кімнатою.</li>
+        </ul>
+
+        <p>Адреса: вул. Велика Кільцева, 5.</p>
+        <button class="list__hotel-btn" data-value="cityHoliday">Подивитись на мапі</button>
+      </div>
+    </div>
+    <div class="list__hotel">
+      <img class="list__hotel-img" src="img/premier-palace.jpeg" alt="">
+      <div class="list__hotel-subheading"><h3>Premier Palace Hotel 5*</h3></div>
+      <div class="list__hotel-desc">
+        <p>Якщо вас цікавлять не просто хороші готелі, а найкращі, то Premier Palace – гідний вашої 100% уваги. Він
+          відноситься до мережі Premier Hotels and Resorts та пропонує розкішні номери в історичній будівлі. </p>
+        <ul>
+          <li>Ціна на добу на двох стартує від 200 євро.</li>
+        </ul>
+
+        <p>Адреса: бул. Т. Шевченка / вул. Пушкінська, 5-7/29.</p>
+        <button class="list__hotel-btn" data-value="premier">Подивитись на мапі</button>
+      </div>
+    </div>
+    <div class="list__hotel">
+      <img class="list__hotel-img" src="img/fairmont.jpeg" alt="">
+      <div class="list__hotel-subheading"><h3>Fairmont Grand Hotel 5*</h3></div>
+      <div class="list__hotel-desc">
+        <p>Fairmont Grand - це п’ятизірковий готель з красивою історичною будівлею у самому серці Подолу можна вибрати один з 258 номерів, кожен з яких є розкішним
+          по-своєму.</p>
+        <ul>
+          <li>Ціна на добу на двох стартують від 260 євро без сніданку.</li>
+        </ul>
+        <p>Адреса: вул. Набережно-Хрещатицька, буд. 1.</p>
+        <button class="list__hotel-btn" data-value="fairmont">Подивитись на мапі</button>
+      </div>
+    </div>
+    <div class="list__hotel">
+      <img class="list__hotel-img" src="img/khayatt.jpeg" alt="">
+      <div class="list__hotel-subheading"><h3>Hyatt Regency 5*</h3></div>
+      <div class="list__hotel-desc">
+        <p>Бізнес-готель “Хаятт Рідженсі” розташований у серці столиці та пішої доступності до популярних місць, має
+          фітнес- та
+          СПА-центр, великий басейн та зали для конференцій та банкетів.</p>
+        <ul>
+          <li>Вартість проживання за добу від 260 євро зі сніданком.</li>
+        </ul>
+        <p>Адреса: вул. Алли Тарасової, 5.</p>
+        <button class="list__hotel-btn" data-value="hyatt">Подивитись на мапі</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="overlay" class="overlay"></div>
+  <div id="popup" class="popup">
+    <div id="map-container"></div>
+  </div>
+
+</main>
+<footer class="footer">
+  <div>
+    <p class="subheading">LOGO</p>
+  </div>
+  <div>
+    <a href="#"><i class="fa-brands fa-twitter" style="color: #f1f2f3"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook" style="color: #f1f2f3"></i></a>
+    <a href="#"><i class="fa-brands fa-linkedin" style="color: #f1f2f3"></i></a>
+  </div>
+
+</footer>
+</body>
+</html>
